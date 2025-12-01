@@ -1,27 +1,32 @@
-/* -------------------- DARK MODE -------------------- */
-const toggleButton = document.querySelector(".toggle-dark");
+// ----- MOBILE NAVIGATION -----
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-        toggleButton.textContent = "Light mode";
-    } else {
-        toggleButton.textContent = "Dark mode";
-    }
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 });
 
-/* -------------------- FADE-IN ANIMACIJE -------------------- */
-const animatedElements = document.querySelectorAll(".fade-in");
+// ----- SCROLL ANIMATIONS -----
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    },
+    { threshold: 0.2 }
+);
 
-function checkAnimations() {
-    animatedElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            el.style.animationPlayState = "running";
+document.querySelectorAll(".animate").forEach(el => observer.observe(el));
+
+// ----- SMOOTH SCROLL -----
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
         }
     });
-}
-
-window.addEventListener("scroll", checkAnimations);
-window.addEventListener("load", checkAnimations);
+});
