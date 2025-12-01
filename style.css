@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f2f4f8;
+    color: #222;
+}
+
+/* HERO */
+.hero {
+    background: url("ante_paro_hero.jpg") center/cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero-overlay {
+    background: rgba(0,0,0,0.55);
+    padding: 40px;
+    border-radius: 12px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+.hero h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* CONTENT */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 22px 0;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #0033a0;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #0033a0;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 50px;
+    font-size: 17px;
+}
