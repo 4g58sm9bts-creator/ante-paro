@@ -1,151 +1,89 @@
-/* -------------------- GLOBAL -------------------- */
-* {
+/* CRNO ZLATNA TEMA */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+header {
+    background: #111;
+    padding: 20px;
+    border-bottom: 2px solid gold;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-body {
-    background: var(--bg);
-    color: var(--text);
-    transition: 0.3s ease;
-    padding-top: 70px;
-}
-
-/* Light & Dark mode vars */
-:root {
-    --bg: #f2f4f8;
-    --text: #10151a;
-    --card: #ffffff;
-    --card-shadow: rgba(0,0,0,0.08);
-    --accent: #0033a0;
-}
-
-body.dark {
-    --bg: #0b0f14;
-    --text: #e8e8e8;
-    --card: #101620;
-    --card-shadow: rgba(255,255,255,0.04);
-    --accent: #4f8cff;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px;
-}
-
-/* -------------------- NAVIGATION -------------------- */
-nav {
-    width: 100%;
-    height: 70px;
-    background: var(--accent);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    gap: 30px;
 }
 
 nav a {
-    color: white;
+    color: gold;
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
-}
-
-/* Dark mode button */
-.toggle-dark {
-    position: absolute;
-    right: 20px;
-    padding: 8px 14px;
-    background: white;
-    color: var(--accent);
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-/* -------------------- HERO -------------------- */
-.hero {
-    background: var(--accent);
     color: white;
-    padding: 80px 20px;
+    text-shadow: 0 0 10px gold;
+}
+
+/* HERO SEKCIJA */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    animation: fadeIn 2s ease;
 }
 
 .hero h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
+    font-size: 70px;
+    color: gold;
 }
 
-.hero h3 {
+.hero p {
     font-size: 22px;
-    font-weight: 300;
 }
 
-/* -------------------- CARDS -------------------- */
-.card {
-    background: var(--card);
-    padding: 30px;
-    border-radius: 14px;
-    margin: 22px 0;
-    box-shadow: 0 4px 14px var(--card-shadow);
+/* KARTICE */
+.section-box {
+    padding: 40px;
+    margin: 40px auto;
+    width: 80%;
+    background: #111;
+    border: 2px solid gold;
+    border-radius: 10px;
+    animation: fadeUp 1.5s ease;
 }
 
-/* -------------------- GRID -------------------- */
-.grid {
+/* TROFEJI GRID */
+.trophy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* -------------------- TABLE -------------------- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    border-bottom: 1px solid #7773;
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    color: var(--accent);
-    font-size: 18px;
-}
-
-/* -------------------- FOOTER -------------------- */
-footer {
+.trophy {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid gold;
     text-align: center;
-    padding: 18px;
-    background: var(--accent);
-    color: white;
-    margin-top: 40px;
-    font-size: 18px;
 }
 
-/* -------------------- ANIMATIONS -------------------- */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 0.8s forwards;
-}
-
+/* ANIMACIJE */
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
+
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
