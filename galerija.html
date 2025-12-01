@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerija fotografija - Ante Paro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .galerija-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .galerija-grid img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="statistika.html">Statistika</a>
+    <a href="bio.html">Biografija</a>
+    <a href="galerija.html">Fotografije</a>
+    <a href="kontakt.html">Kontakt</a>
+    <div class="toggle-dark">Dark mode</div>
+</nav>
+
+<div class="container">
+    <h2>Galerija fotografija</h2>
+
+    <div class="galerija-grid">
+        <img src="galerija1.jpg" alt="">
+        <img src="galerija2.jpg" alt="">
+        <img src="galerija3.jpg" alt="">
+        <img src="galerija4.jpg" alt="">
+        <img src="galerija5.jpg" alt="">
+    </div>
+</div>
+
+<footer>© 2025 Ante Paro • NK Pag</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
