@@ -1,89 +1,78 @@
-/* CRNO ZLATNA TEMA */
 body {
+    font-family: Arial, sans-serif;
+    background: #0a1a3d;
+    color: white;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #000;
-    color: #fff;
+    padding: 0;
 }
 
 header {
-    background: #111;
-    padding: 20px;
-    border-bottom: 2px solid gold;
+    background: #1c4fba;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 4px solid #7b1e2b;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+nav {
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    gap: 25px;
 }
 
 nav a {
-    color: gold;
+    color: white;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: white;
-    text-shadow: 0 0 10px gold;
+    background: #7b1e2b;
 }
 
-/* HERO SEKCIJA */
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    animation: fadeIn 2s ease;
-}
-
-.hero h1 {
-    font-size: 70px;
-    color: gold;
-}
-
-.hero p {
-    font-size: 22px;
-}
-
-/* KARTICE */
-.section-box {
-    padding: 40px;
-    margin: 40px auto;
+.container {
     width: 80%;
-    background: #111;
-    border: 2px solid gold;
-    border-radius: 10px;
-    animation: fadeUp 1.5s ease;
+    margin: auto;
+    padding: 40px 0;
 }
 
-/* TROFEJI GRID */
-.trophy-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.trophy {
-    background: #222;
+.card {
+    background: #1c4fba;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid gold;
+    border-left: 6px solid #7b1e2b;
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #7b1e2b;
+    padding: 20px;
     text-align: center;
+    margin-top: 40px;
 }
 
-/* ANIMACIJE */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px black;
+}
+
+/* Animacije */
+.fade {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    to { opacity: 1; }
 }
-
-@keyframes fadeUp {
-    from {opacity: 0; transform: translateY(40px);}
-    to {opacity: 1; transform: translateY(0);}
